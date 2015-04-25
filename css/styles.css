@@ -470,11 +470,11 @@ Buttons
 .use-btn {
     display: inline-block;
     margin: 0 10px 10px 0;
-    padding: 20px 50px;
+    padding: 20px 50px 20px 20px;
     border-radius: 3px;
     background-color: #fff;
     color: #4b98a9;
-    font-size: 16px;
+    font-size: 14pt;
 }
 .use-btn:hover, .use-btn:focus {
     background-color: #73d0da;
@@ -581,10 +581,10 @@ Hero
     position: relative;
     padding: 60px 0 60px 0;
     min-height: 800px;
-    background-color: #397AE3;
-    /*background: rgb(40, 70, 102) url('../img/hero-01.jpg') no-repeat center center;*/
+    /*background-color: #eee;*/
+    background: rgb(40, 70, 102) url('../img/hero-01.jpg') no-repeat center center;
     background-size: cover;
-    color: #fff;
+    color: white;
 }
 .hero h1 {
     margin: 200px 0 45px 0;
@@ -658,26 +658,27 @@ Features Slider
 ========================================================================== */
 .features-bg {
     position: relative;
-    min-height: 400px;
+    min-height: 500px;
     background: url('../img/features-intro-01.jpg') no-repeat center center;
     background-size: cover;
 }
 .features-img {
     width: 100%;
-    height: 400px;
+    height: 500px;
     text-align: center;
     line-height: 400px;
 }
 .features-slider {
     position: relative;
-    padding: 11% 100px 10% 100px;
-    height: 400px;
-    background-color: #397AE3;
+      padding: 5% 50px 10% 50px;
+    height: 500px;
+    background-color: #3F6184;
 }
 .features-slider ul {
     margin: 0;
     padding: 0;
     list-style: none;
+      height: 100%;
 }
 .features-slider ul li {
     width: 100%;
@@ -690,7 +691,7 @@ Features Slider
 }
 .features-slider li p {
     color: #fff;
-    font-size: 14px;
+    font-size: 20px;
 }
 .features-intro-img {
     position: relative
@@ -741,8 +742,8 @@ Features List
     font-size: 25px;
     line-height: 90px;
 }
-.feature-icon i {
-    color: #4e9ba3
+.feature-icon img {
+      width: 70px;
 }
 
 /* ==========================================================================
@@ -784,11 +785,12 @@ Showcase
     margin: 0 0 20px 0;
     color: #fff;
     font-weight: 400;
-    font-size: 22px;
+    font-size: 30px;
 }
 .showcase p {
     margin-bottom: 25px;
     color: #fff;
+    font-size: 22px;
 }
 .device {
     position: absolute;
@@ -806,10 +808,34 @@ Showcase
     height: 445px;
     background: rgba(0, 0, 0, 0.3);
 }
-.device-content img {
+.mobileSlidesWrapper {
     width: 247px;
     height: 445px;
+    background-color: rgba(255, 255, 255, 0.3);
 }
+
+.mobileSlides{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    
+}
+
+.mobileSlides>span{
+    color: white;
+    font-size: 12pt;
+    padding-top:10px;
+}
+
+.device-content img 
+{
+    width: 100%;
+    height: auto;
+    padding-bottom: 10px;
+}
+
+
 .showcase-wrap {
     position: relative;
     padding: 100px 0;
@@ -959,7 +985,6 @@ footer ul {
     margin-top: 30px
 }
 footer li {
-    float: left;
     margin-right: 15%;
     list-style: none;
     text-transform: uppercase;
@@ -1017,10 +1042,19 @@ Nav Overlay
     margin-bottom: 10px;
     font-size: 40px;
 }
+
+.overlay ul li img {
+    width: 40px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
 .overlay ul li a {
     display: block;
     padding: 50px 0;
-    min-width: 190px;
+    width: 190px;
+    height: 220px;
     border: 2px solid #fff;
     border-radius: 3px;
     background-color: #345271;
@@ -1094,4 +1128,111 @@ Waypoints
 .delay-1s {
     -webkit-animation-delay: 1s;
     animation-delay: 1s;
+}
+
+
+
+
+
+.readMoreDiv{
+    margin: 35px 0px 35px 0px;
+}
+
+
+.clientImageWrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 25% 0;
+    width: 100%;
+    height: 100%;
+    text-align: -webkit-center;
+}
+
+
+.sectionHeading{
+    margin: 40px;
+    font-size: 27pt;
+    text-align: -webkit-center;
+    color: rgb(72, 88, 105);
+      text-transform: uppercase;
+}
+
+
+ul#homeSlider li {
+  font-size: 30pt;
+}
+
+
+
+.videoBlock{
+    width:33%;
+    float:left;
+}
+
+
+.contact_details {
+  border: 3px solid #E4E2E2;
+  padding: 2%;
+  width: 44%;
+  margin: 3%;
+  margin-top: 2%;
+  background-color: #eee;
+  float: left;
+  height: 175px;
+}
+
+
+.contactUsInput{
+    width: 90%;
+    height: 50px;
+    border: 2px solid #eee;
+    border-radius: 5px;
+    font-size: 12pt;
+    padding: 20px;
+    color: #B20006;
+}
+
+a.email_contact {
+    font-style: italic;
+    cursor: pointer;
+    color: rgb(71, 163, 218);
+    text-decoration: underline;
+}
+
+
+
+.contactUsDiv{
+    margin-top: 2%;
+    text-align: center;
+}
+
+
+.secondRowContactDiv {
+    text-align: center;
+    /*  width: 60%;
+      margin: 0 auto;*/
+}
+
+.thirdRowContactDiv {
+    height: 10%;
+    text-align: center;
+    /*  width: 60%;
+      margin: 0 auto;*/
+}
+
+.thirdRowContactDiv>div {
+  width: 25%;
+  padding: 1%;
+  background-color: #3F6184;
+  color: white;
+  margin: 0 auto;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.thirdRowContactDiv>div:hover{
+    background-color: #098CDA;
 }

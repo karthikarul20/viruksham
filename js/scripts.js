@@ -5,36 +5,57 @@ $(document).ready(function() {
 	$('.wp1').waypoint(function() {
 		$('.wp1').addClass('animated fadeInLeft');
 	}, {
-		offset: '75%'
+		offset: '80%'
 	});
-	$('.wp2').waypoint(function() {
-		$('.wp2').addClass('animated fadeInDown');
+        
+	$('.wp2_1').waypoint(function() {
+		$('.wp2_1').addClass('animated fadeInDown');
 	}, {
-		offset: '75%'
+		offset: '80%'
 	});
+        $('.wp2_2').waypoint(function() {
+		$('.wp2_2').addClass('animated fadeInDown');
+	}, {
+		offset: '80%'
+	});
+        $('.wp2_3').waypoint(function() {
+		$('.wp2_3').addClass('animated fadeInDown');
+	}, {
+		offset: '80%'
+	});
+        
 	$('.wp3').waypoint(function() {
 		$('.wp3').addClass('animated bounceInDown');
 	}, {
-		offset: '75%'
+		offset: '80%'
 	});
 	$('.wp4').waypoint(function() {
 		$('.wp4').addClass('animated fadeInDown');
 	}, {
-		offset: '75%'
+		offset: '80%'
 	});
+        
 
 	/***************** Flickity ******************/
 
+        $('#homeSlider').flickity({
+		cellAlign: 'left',
+		contain: true,
+		prevNextButtons: false,
+                autoPlay: 5000
+	}); 
 	$('#featuresSlider').flickity({
 		cellAlign: 'left',
 		contain: true,
-		prevNextButtons: false
+		prevNextButtons: false,
+                autoPlay: 3000
 	});
 
 	$('#showcaseSlider').flickity({
 		cellAlign: 'left',
 		contain: true,
 		prevNextButtons: false,
+                autoPlay: 3000,
 		imagesLoaded: true
 	});
 
@@ -61,6 +82,42 @@ $(document).ready(function() {
 		padding: 4,
 	});
 });
+
+
+
+
+$(document).ready(function() {
+	$(".col-md-4").hover(
+                function(){
+                    $(this).find("img").css({
+                        "-webkit-transition-duration": "0.7s",
+                        "-moz-transition-duration": "0.7s",
+                        "-0-transition-duration": "0.7s",
+                        "transition-duration": "0.7s" /* For modern browsers(CSS3)  */
+                    });
+                    $(this).find("img").css({
+                        "-webkit-transform": "rotate(360deg)",
+                        "-moz-transform": "rotate(360deg)",
+                        "-o-transform": "rotate(360deg)",
+                        "transform": "rotate(360deg)" /* For modern browsers(CSS3)  */
+                    });
+                }, function(){
+                    $(this).find("img").css({
+                        "-webkit-transition-duration": "0.7s",
+                        "-moz-transition-duration": "0.7s",
+                        "-0-transition-duration": "0.7s",
+                        "transition-duration": "0.7s" /* For modern browsers(CSS3)  */
+                    });
+                    $(this).find("img").css({
+                        "-webkit-transform": "rotate(0deg)",
+                        "-moz-transform": "rotate(0deg)",
+                        "-o-transform": "rotate(0deg)",
+                        "transform": "rotate(0deg)" /* For modern browsers(CSS3)  */
+                    });
+                }
+        );
+});
+
 
 /***************** Nav Transformicon ******************/
 

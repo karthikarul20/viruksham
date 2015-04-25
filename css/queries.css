@@ -10,6 +10,7 @@
 	.screenshots-intro{padding:110px 0 100px 0;}
 	.feature-content{width:80%;}
 	.features-slider{height:100%}
+        .videoBlock{width:100%;float: none;  text-align: left;}
 }
 @media screen and (max-width:680px){
 	.feature-content{width:60%;}
