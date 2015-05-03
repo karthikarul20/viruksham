@@ -90,10 +90,10 @@ $(document).ready(function() {
 	$(".col-md-4").hover(
                 function(){
                     $(this).find("img").css({
-                        "-webkit-transition-duration": "0.7s",
-                        "-moz-transition-duration": "0.7s",
-                        "-0-transition-duration": "0.7s",
-                        "transition-duration": "0.7s" /* For modern browsers(CSS3)  */
+                        "-webkit-transition-duration": "1s",
+                        "-moz-transition-duration": "1s",
+                        "-0-transition-duration": "1s",
+                        "transition-duration": "1s" /* For modern browsers(CSS3)  */
                     });
                     $(this).find("img").css({
                         "-webkit-transform": "rotate(360deg)",
@@ -103,10 +103,10 @@ $(document).ready(function() {
                     });
                 }, function(){
                     $(this).find("img").css({
-                        "-webkit-transition-duration": "0.7s",
-                        "-moz-transition-duration": "0.7s",
-                        "-0-transition-duration": "0.7s",
-                        "transition-duration": "0.7s" /* For modern browsers(CSS3)  */
+                        "-webkit-transition-duration": "1s",
+                        "-moz-transition-duration": "1s",
+                        "-0-transition-duration": "1s",
+                        "transition-duration": "1s" /* For modern browsers(CSS3)  */
                     });
                     $(this).find("img").css({
                         "-webkit-transform": "rotate(0deg)",
