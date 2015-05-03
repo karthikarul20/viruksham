@@ -58,6 +58,14 @@ $(document).ready(function() {
                 autoPlay: 3000,
 		imagesLoaded: true
 	});
+        
+        
+        $('.otherSlider').flickity({
+		cellAlign: 'left',
+		contain: true,
+		prevNextButtons: false,
+                autoPlay: 3000
+	});
 
 	/***************** Fancybox ******************/
 

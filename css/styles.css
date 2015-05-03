@@ -1157,6 +1157,9 @@ Waypoints
     color: rgb(72, 88, 105);
       text-transform: uppercase;
 }
+.sectionHeading a{
+      color: rgb(72, 88, 105);
+}
 
 
 ul#homeSlider li {
@@ -1247,4 +1250,9 @@ a.email_contact {
   width: 200px;
   text-align: center;
   border-radius: 25px; 
+}
+
+
+.bottomButtons:hover{
+  background-color: rgba(178, 177, 177, 0.5);
 }
