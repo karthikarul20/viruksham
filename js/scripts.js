@@ -154,3 +154,15 @@ $('a[href*=#]:not([href=#])').click(function() {
 		}
 	}
 });
+
+
+
+
+
+
+
+function openReadMore()
+{
+
+    $('#element_to_pop_up').bPopup();
+}

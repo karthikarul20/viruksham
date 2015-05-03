@@ -1135,7 +1135,7 @@ Waypoints
 
 
 .readMoreDiv{
-    margin: 35px 0px 35px 0px;
+    margin: 0px 0px 35px 0px;
 }
 
 
@@ -1235,4 +1235,16 @@ a.email_contact {
 
 .thirdRowContactDiv>div:hover{
     background-color: #098CDA;
+}
+
+
+.bottomButtons{
+    position: fixed;
+  bottom: 0px;
+  right: 0px;
+  z-index: 999;
+  background-color: rgba(178, 177, 177, 0.1);
+  width: 200px;
+  text-align: center;
+  border-radius: 25px; 
 }
