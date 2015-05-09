@@ -347,7 +347,7 @@ function constructFacebookFeeds()
 {
 //    var FEED_URL = "https://www.facebook.com/feeds/page.php?format=rss20&id=1430802810470529";
 //419634484771732
-    var FEED_URL = "https://www.facebook.com/feeds/page.php?format=rss20&id=419634484771732";
+    var FEED_URL = "https://www.wallflux.com/feed/419634484771732";
     $.ajax({
         url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent(FEED_URL),
         dataType: 'json',
@@ -357,7 +357,7 @@ function constructFacebookFeeds()
                 var content = "";
 
                 content += '<div class="fb-like-box" data-href="https://www.facebook.com/VirukshamGroups" data-width="500" data-height="300" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>';
-
+                content += '<div>&nbsp;</div>';
                 for (i = 0; i < data.responseData.feed.entries.length; i++)
                 {
                     var url = data.responseData.feed.entries[i].link;
