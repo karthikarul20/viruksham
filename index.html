@@ -21,6 +21,7 @@
             <link href="css/animate.css" rel="stylesheet">
             <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
             <link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
+            <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCpSwYUyk4mFqhD27C0h6kczD8UWV85u88&sensor=true"></script>
             <link href="css/styles.css" rel="stylesheet">
             <link href="css/queries.css" rel="stylesheet">
             <!-- Facebook and Twitter integration -->
@@ -156,7 +157,7 @@
                                     <img src="img/icons/crane1.png">
                                 </div>
                                 <div class="feature-content">
-                                    <h1>CRANE HIRING / RENTAL SERVICES</h1>
+                                    <h1><a href="cranes.html#cranes1">CRANE HIRING / RENTAL SERVICES</a></h1>
                                     <p>We do hire cranes for all natured heavy lifts and have a vast experience in the fields of Wind Turbine Erections...</p>
                                     <a href="cranes.html#cranes1" class="read-more-btn">Read More <i class="fa fa-chevron-circle-right"></i></a>
                                 </div>
@@ -166,7 +167,7 @@
                                     <img src="img/icons/crane2.png">
                                 </div>
                                 <div class="feature-content">
-                                    <h1>CRANE OPTIMIZATION FOR JOB / PROCUREMENT</h1>
+                                    <h1><a href="cranes.html#cranes2">CRANE OPTIMIZATION FOR JOB / PROCUREMENT</a></h1>
                                     <p>The method of “Optimization” plays a role in selecting the cranes required for the job work and crane procurement...</p>
                                     <a href="cranes.html#cranes2" class="read-more-btn">Read More <i class="fa fa-chevron-circle-right"></i></a>
                                 </div>
@@ -176,7 +177,7 @@
                                     <img src="img/icons/crane3.png">
                                 </div>
                                 <div class="feature-content">
-                                    <h1>USED CRANES IMPORT / EXPORT</h1>
+                                    <h1><a href="cranes.html#cranes3">USED CRANES IMPORT / EXPORT</a></h1>
                                     <p>Our passions on Heavy Lift Cranes have involved us in the transaction of Crane import from foreign countries...</p>
                                     <a href="cranes.html#cranes3" class="read-more-btn">Read More <i class="fa fa-chevron-circle-right"></i></a>
                                 </div>
@@ -206,7 +207,7 @@
                                     <img src="img/icons/wind_mill.png">
                                 </div>
                                 <div class="feature-content">
-                                    <h1>WIND POWER DEVELOPMENT</h1>
+                                    <h1><a href="renewable.html#renewable1">WIND POWER DEVELOPMENT</a></h1>
                                     <p>All consultancy services from preliminary project report preparation to commissioning of Wind Farm will be provided...</p>
                                     <a href="renewable.html#renewable1" class="read-more-btn">Read More <i class="fa fa-chevron-circle-right"></i></a>
                                 </div>
@@ -393,7 +394,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <h1>Viruksham Product or Service</h1>
+                                <h1>Viruksham Products</h1>
                                 <p>We, VIRUKSHAM have shaped us in the segment of manufacturing through our products of our related above Service. We have developed a best technical team in designing, analyzing and assembling our products to a definite shape. Well determined designs of all our products with a unique significance have made our product a step high from other Companies.</p>
                                 <!--							<blockquote class="team-quote">
                                                                                                 <div class="avatar"><img src="img/avatar.png" alt="User Avatar"></div>
@@ -446,12 +447,13 @@
             <section class="features-intro" id="contactus">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="sectionHeading animated fadeInDown">
+                        
+<!--                        <div class="sectionHeading animated fadeInDown">
                             Contact Us
-                        </div>
+                        </div>-->
                         <div class="col-md-6  features-intro-img">
                             <div >
-                                <div class="contact_details">
+<!--                                <div class="contact_details">
                                     <div style="  font-weight: bold;">Registered Office:</div> 
                                     <div>55, Sivan Kovil Street</div>   
                                     <div>Vallioor – 627117</div>   
@@ -465,6 +467,14 @@
                                     <div>Opp Kamarajar Statue, South Main Road,</div>   
                                     <div>Vallioor – 627 117</div>   
                                     <div>Tirunelveli DT, TamilNadu</div>   
+                                </div>-->
+                                <div style="  text-align: center;padding: 3%;">
+                                    <div class="my_popup_open" style="  font-size: 20pt;text-decoration: underline;cursor: pointer;">
+                                        Contact Us
+                                    </div>
+                                </div>
+                                <div style="width: 94%;margin: 3%;">
+                                    <div id="addressMap" style="width:100%;height:400px;"></div>
                                 </div>
                                 <div class="contact_details" style="width: 94%;height: 205px;">
                                     <div style="  font-weight: bold;">Address for mail communication:</div> 
@@ -482,33 +492,45 @@
                             </div>                        
                         </div>
                         <div class="col-md-6 ">
-                            <div id="contactsRightDiv">
-                                <div style="width: 100%;text-align: center;font-size: 15pt;">
-                                    We are happy to hear from you!
+                            <div style="  text-align: center;padding: 3%;">
+                                <div style="  font-size: 20pt;cursor: pointer;">
+                                    &nbsp;
                                 </div>
-                                <div>
-                                    <div id="emailResponseText" style="  text-align: center;color: rgb(0, 237, 0);"></div>
-                                </div>
-                                <div class="contactUsDiv">
-                                    <input id="emailName"  class="contactUsInput" type="text" placeholder="Name*"/>
-                                </div>
-                                <div class="contactUsDiv">
-                                    <input id="emailFrom"  class="contactUsInput" type="text" placeholder="Email Address*"/>
-                                </div>
-                                <div class="contactUsDiv">
-                                    <input id="emailMobile"  class="contactUsInput" type="text" placeholder="Mobile Number*"/>
-                                </div>
-                                <div class="secondRowContactDiv">
-                                    <textarea id="emailContent" placeholder="Write your query*" style="border: 2px solid #eee;border-radius: 5px;width: 90%;height: 200px;font-size: 12pt;padding: 20px;color: #B20006;margin-top: 2%;"></textarea>
-                                </div>
-                                <div class="thirdRowContactDiv">
-                                    <div>Send</div>
-                                </div>
+                            </div>
+                            <div id="feedsDiv" style="overflow-y: scroll;  text-align: center;max-height: 750px;">
 
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- this content is initially hidden. Shown as pop up-->
+                <div id="my_popup" style='background-color: #eee;padding: 2%;'>
+                    <div class="my_popup_close" style="  float: right;text-decoration: underline;cursor:pointer;">Close</div>
+                    <div style="padding: 5%;">
+                        <div style="width: 100%;text-align: center;font-size: 15pt;">
+                            We are happy to hear from you!
+                        </div>
+                        <div>
+                            <div id="emailResponseText" style="  text-align: center;color: rgb(0, 237, 0);"></div>
+                        </div>
+                        <div class="contactUsDiv">
+                            <input id="emailName"  class="contactUsInput" type="text" placeholder="Name*"/>
+                        </div>
+                        <div class="contactUsDiv">
+                            <input id="emailFrom"  class="contactUsInput" type="text" placeholder="Email Address*"/>
+                        </div>
+                        <div class="contactUsDiv">
+                            <input id="emailMobile"  class="contactUsInput" type="text" placeholder="Mobile Number*"/>
+                        </div>
+                        <div class="secondRowContactDiv">
+                            <textarea id="emailContent" placeholder="Write your query*" style="border: 2px solid #eee;border-radius: 5px;width: 100%;height: 200px;font-size: 12pt;padding: 20px;color: #B20006;margin-top: 2%;"></textarea>
+                        </div>
+                        <div class="thirdRowContactDiv">
+                            <div>Send</div>
+                        </div>
+                    </div>
+                </div>
+
             </section>
             <footer>
                 <div class="container">
@@ -564,6 +586,6 @@
             <script src="js/waypoints.min.js"></script>
             <script src="js/bootstrap.min.js"></script>
             <script src="js/scripts.js"></script>
-            
+            <script src="js/jquery.popupoverlay.js"></script>
         </body>
     </html>

@@ -85,10 +85,10 @@ $(document).ready(function() {
 
 });
 
-$(document).ready(function() {
-	$("a.single_image").fancybox({
-		padding: 4,
-	});
+$(document).ready(function () {
+    $("a.single_image").fancybox({
+        padding: 4,
+    });
 });
 
 
@@ -167,10 +167,296 @@ $('a[href*=#]:not([href=#])').click(function() {
 
 
 
+//viruksham custom functions
 
 
-function openReadMore()
+
+$(document).ready(function () {
+    
+    //initializing google maps
+    constructGoogleMap();
+    
+    
+    //initializing contact pop up
+    $('#my_popup').popup({transition: 'all 0.3s'});
+    
+    
+    initializeEmail();
+    
+    //initializing facebook
+    
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: '1480878908808692',
+            xfbml: true,
+            version: 'v2.1'
+        });
+        constructFacebookFeeds();
+    };
+
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    
+    
+    
+    
+//    
+//    
+//    
+//    window.fbAsyncInit = function () {
+//        FB.init({
+//            appId: '895186287191090',
+//            xfbml: true,
+//            version: 'v2.3'
+//        });
+//        constructFacebookFeeds();
+//    };
+//
+//    (function (d, s, id) {
+//        var js, fjs = d.getElementsByTagName(s)[0];
+//        if (d.getElementById(id)) {
+//            return;
+//        }
+//        js = d.createElement(s);
+//        js.id = id;
+//        js.src = "//connect.facebook.net/en_US/sdk.js";
+//        fjs.parentNode.insertBefore(js, fjs);
+//    }(document, 'script', 'facebook-jssdk'));
+
+
+});
+
+
+
+function constructGoogleMap()
 {
+    
+    // Set the initial Lat and Long of the Google Map
+    if (window.google && window.google.maps) {
+        try
+        {
+            //8.715779, 77.755515
+            //8.714088, 77.755284
+            var regisOffLL = new google.maps.LatLng(8.715779, 77.755515);
+            var newOffLL = new google.maps.LatLng(8.714088, 77.755284);
+            // Google Map options
+            var myOptions = {
+                zoom: 18,
+                center: newOffLL,
+                scrollwheel: false,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+//                disableDefaultUI: true
+            };
 
-    $('#element_to_pop_up').bPopup();
+            // Create the Google Map, set options
+            var map = new google.maps.Map(document.getElementById("addressMap"), myOptions);
+            
+            
+            
+            
+            
+            
+            //marker for registered Office
+            var regisOffMarker = new google.maps.Marker({
+                position: regisOffLL,
+                map: map,
+                animation: google.maps.Animation.DROP
+            });
+            
+            var regiOffAddress = '<div>';
+            regiOffAddress += '     <div style="  font-weight: bold;">Registered Office:</div> ';
+            regiOffAddress += '     <div>55, Sivan Kovil Street</div>   ';
+            regiOffAddress += '     <div>Tirunelveli DT</div>   ';
+            regiOffAddress += '     <div>TamilNadu</div> ';
+            regiOffAddress += '</div>';
+            var regiOffIW = new google.maps.InfoWindow({
+                content: regiOffAddress,
+                maxWidth: 200
+            });
+            
+            
+            google.maps.event.addListener(regisOffMarker, 'click', function() {
+                if (regiOffIW && regiOffIW.getMap())
+                    regiOffIW.close();
+                else if (regiOffIW)
+                    regiOffIW.open(map, regisOffMarker);
+            });
+            
+            
+            
+            
+            
+            
+            //marker for new office
+            var newOffMarker = new google.maps.Marker({
+                position: newOffLL,
+                map: map
+            });
+            
+            
+            var newOffAddress = '<div>';
+            newOffAddress += '     <div style="  font-weight: bold;">New Office:</div> ';
+            newOffAddress += '     <div>Building 1st Floor,</div>   ';
+            newOffAddress += '     <div>Beside Green’s Complex,</div>   ';
+            newOffAddress += '     <div>Opp Kamarajar Statue, South Main Road,</div> ';
+            newOffAddress += '     <div>Vallioor – 627 117</div> ';
+            newOffAddress += '     <div>Tirunelveli DT, TamilNadu</div> ';
+            newOffAddress += '</div>';
+            var newOffIW = new google.maps.InfoWindow({
+                content: newOffAddress,
+                maxWidth: 200
+            });
+            
+            
+            google.maps.event.addListener(newOffMarker, 'click', function() {
+                if (newOffIW && newOffIW.getMap())
+                    newOffIW.close();
+                else if (newOffIW)
+                    newOffIW.open(map, newOffMarker);
+            });
+            
+            
+            
+            
+            
+            
+
+            setTimeout(function(){ 
+                regiOffIW.open(map, regisOffMarker); 
+                newOffIW.open(map, newOffMarker); 
+            }, 300);
+        }
+        catch (err) {
+            console.log("constructGoogleMap error:" + err);
+        }
+    }
 }
+
+
+
+
+function constructFacebookFeeds()
+{
+//    var FEED_URL = "https://www.facebook.com/feeds/page.php?format=rss20&id=1430802810470529";
+//419634484771732
+    var FEED_URL = "https://www.facebook.com/feeds/page.php?format=rss20&id=419634484771732";
+    $.ajax({
+        url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent(FEED_URL),
+        dataType: 'json',
+        async: true,
+        success: function (data) {
+            if (data.responseData.feed && data.responseData.feed.entries) {
+                var content = "";
+
+                content += '<div class="fb-like-box" data-href="https://www.facebook.com/VirukshamGroups" data-width="500" data-height="300" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>';
+
+                for (i = 0; i < data.responseData.feed.entries.length; i++)
+                {
+                    var url = data.responseData.feed.entries[i].link;
+                    content += '<div class="fb-post" data-href="' + url + '" data-width="500">';
+                    content += '</div>';
+                    content += '<div>&nbsp;</div>';
+                }
+            }
+            $("#feedsDiv").html(content);
+        }
+    });
+}
+
+
+
+function is_email(email) {
+    var emailReg = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    return emailReg.test(email);
+} 
+
+function initializeEmail()
+{
+    $('.thirdRowContactDiv').click(function () {
+        if(!$("#emailName").val())
+        {
+            $("#emailResponseText").html("Name is mandatory...");
+            $("#emailResponseText").css("color","red");
+            return;
+        }
+        else if(!$("#emailFrom").val())
+        {
+            $("#emailResponseText").html("Email Address is mandatory...");
+            $("#emailResponseText").css("color","red");
+            return;
+        }
+        else if(!is_email($("#emailFrom").val()))
+        {
+            $("#emailResponseText").html("Please enter valid email address...");
+            $("#emailResponseText").css("color","red");
+            return;
+        }
+        else if(!$("#emailMobile").val())
+        {
+            $("#emailResponseText").html("Mobile Number is mandatory...");
+            $("#emailResponseText").css("color","red");
+            return;
+        }
+        else if(!$("#emailContent").val())
+        {
+            $("#emailResponseText").html("Please type some content...");
+            $("#emailResponseText").css("color","red");
+            return;
+        }
+            
+        $.ajax({
+            type: "POST",
+            url: "https://mandrillapp.com/api/1.0/messages/send.json",
+            data: {
+                'key': 'S2tn5UN3pAf6tFAuk04vGA',
+                'message': {
+                    'from_email': $("#emailFrom").val(),
+                    'to': [
+                        {
+                            'email': 'karthikarul20@gmail.com',
+                            'name': 'Karthik',
+                            'type': 'to'
+                        },
+                        {
+                            'email': 'kalees87@gmail.com',
+                            'name': 'Kaleesh',
+                            'type': 'to'
+                        }
+                    ],
+                    'autotext': 'true',
+                    'subject': "Email from Viruksham Contact US Page - "+$("#emailName").val(),
+                    'html': "Name: "+$("#emailName").val()+"<br>"+"Email: "+$("#emailFrom").val()+"<br>"+"Mobile: "+$("#emailMobile").val()+"<br>"+"Content: "+$("#emailContent").val()
+                }
+            },
+            success: function (response) {
+                if (response)
+                {
+                    $("#emailFrom").val("");
+                    $("#emailName").val("");
+                    $("#emailMobile").val("");
+                    $("#emailCity").val("");
+                    $("#emailContent").val("");
+                    $("#emailResponseText").html("Thanks for contacting Viruksham. We will get back to you soon.");
+                    $("#emailResponseText").css("color", "rgb(0, 237, 0)");
+                }
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                $("#emailResponseText").html("Network error. Please try again after some time...");
+                $("#emailResponseText").css("color","red");
+            },
+            complete: function (jqXHR, textStatus) {
+                
+            }
+        });
+    });
+}
+
+

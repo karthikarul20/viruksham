@@ -721,6 +721,15 @@ Features List
     color: #24374b;
     font-size: 20px;
 }
+
+.features-list h1 a{
+        color: #24374b;
+}
+
+.features-list h1 a:hover{
+        color: #73d0da;
+}
+
 .features-list p {
     margin-bottom: 20px;
     color: #778899;
@@ -1187,7 +1196,7 @@ ul#homeSlider li {
 
 
 .contactUsInput{
-    width: 90%;
+    width: 100%;
     height: 50px;
     border: 2px solid #eee;
     border-radius: 5px;
@@ -1247,7 +1256,6 @@ a.email_contact {
   right: 0px;
   z-index: 999;
   background-color: rgba(178, 177, 177, 0.1);
-  width: 200px;
   text-align: center;
   border-radius: 25px; 
 }
