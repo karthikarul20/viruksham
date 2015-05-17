@@ -42,13 +42,15 @@ $(document).ready(function() {
 		cellAlign: 'left',
 		contain: true,
 		prevNextButtons: false,
-                autoPlay: 5000
+                autoPlay: 5000,
+                draggable: false
 	}); 
 	$('#featuresSlider').flickity({
 		cellAlign: 'left',
 		contain: true,
 		prevNextButtons: false,
-                autoPlay: 3000
+                autoPlay: 3000,
+                draggable: false
 	});
 
 	$('#showcaseSlider').flickity({
@@ -56,7 +58,8 @@ $(document).ready(function() {
 		contain: true,
 		prevNextButtons: false,
                 autoPlay: 3000,
-		imagesLoaded: true
+		imagesLoaded: true,
+                draggable: false
 	});
         
         
@@ -64,7 +67,8 @@ $(document).ready(function() {
 		cellAlign: 'left',
 		contain: true,
 		prevNextButtons: false,
-                autoPlay: 3000
+                autoPlay: 3000,
+                draggable: false
 	});
 
 	/***************** Fancybox ******************/
