@@ -245,11 +245,11 @@ function constructGoogleMap()
         {
             //8.715779, 77.755515
             //8.714088, 77.755284
-            var regisOffLL = new google.maps.LatLng(8.715779, 77.755515);
-            var newOffLL = new google.maps.LatLng(8.714088, 77.755284);
+            var regisOffLL = new google.maps.LatLng(8.382331, 77.615962);
+            var newOffLL = new google.maps.LatLng(8.382448, 77.609600);
             // Google Map options
             var myOptions = {
-                zoom: 18,
+                zoom: 15,
                 center: newOffLL,
                 scrollwheel: false,
                 mapTypeId: google.maps.MapTypeId.ROADMAP,
@@ -303,7 +303,7 @@ function constructGoogleMap()
             
             
             var newOffAddress = '<div>';
-            newOffAddress += '     <div style="  font-weight: bold;">New Office:</div> ';
+            newOffAddress += '     <div style="  font-weight: bold;">Marketing Office:</div> ';
             newOffAddress += '     <div>Building 1st Floor,</div>   ';
             newOffAddress += '     <div>Beside Green’s Complex,</div>   ';
             newOffAddress += '     <div>Opp Kamarajar Statue, South Main Road,</div> ';
